@@ -1,16 +1,63 @@
-# React + Vite
+# 📖 Учим стихи легко / Learn Poems Easily
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Интерактивное веб-приложение для заучивания стихотворений. Позволяет вставить любой текст и постепенно скрывать слова, тренируя память. Основано на методе интервальных повторений.
 
-Currently, two official plugins are available:
+**[Попробовать](https://milarut.github.io/verse-vanish)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Возможности
 
-## React Compiler
+-   **Загрузка своего текста:** Вставьте автора, название и текст стихотворения через удобную форму.
+-   **Поддержка языков:** Работает с кириллицей, латиницей и специальными символами (немецкий, испанский, французский).
+-   **Три режима скрытия:**
+    -   **Скрыть слово в начале:** Постепенно скрывает первые слова в каждой строке.
+    -   **Скрыть слово в конце:** Постепенно скрывает последние слова в каждой строке.
+    -   **Скрыть случайное слово:** Скрывает по одному случайному слову в каждой строке.
+-   **Умная верстка:** Знаки препинания (`,`, `.`, `:`, `—` и др.) не скрываются и отделяются от слов пробелами по правилам типографики.
+-   **Адаптивный дизайн:** Удобно пользоваться как на мобильных устройствах, так и десктопах.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Демонстрация работы
 
-## Expanding the ESLint configuration
+*Как это работает:*
+1.  Пользователь вводит стихотворение.
+2.  Нажимает на одну из кнопок.
+3.  Слова начинают исчезать, помогая запомнить текст.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*(Здесь можно добавить гифку или скриншот вашего приложения)*
+
+## 🛠️ Стек технологий
+
+-   **Frontend:**
+    -   React (хуки, функциональные компоненты)
+    -   JavaScript (ES6+)
+    -   HTML5 / CSS3
+-   **Деплой:**
+    -   GitHub Pages
+
+## 📦 Установка и запуск локально
+
+Чтобы развернуть проект у себя на компьютере, выполните следующие шаги:
+
+1.  **Клонируйте репозиторий:**
+    ```bash
+    git clone https://github.com/MilaRut/verse-vanish.git
+    ```
+2.  **Перейдите в папку проекта:**
+    ```bash
+    cd poem-learn
+    ```
+3.  **Установите зависимости:**
+    ```bash
+    npm install
+    ```
+4.  **Запустите проект в режиме разработки:**
+    ```bash
+    npm start
+    ```
+    Приложение откроется в браузере по адресу `http://localhost:5173/`.
+
+## 🔧 Сборка для продакшна
+
+Чтобы создать оптимизированную сборку для деплоя, выполните:
+```bash
+npm run build
+```
