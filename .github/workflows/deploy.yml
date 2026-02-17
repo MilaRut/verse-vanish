@@ -3,7 +3,6 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: ["main", "master"]
-  
   workflow_dispatch:
 
 permissions:
@@ -34,12 +33,12 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          CI: false 
+          CI: false
 
-      - name: Upload build artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
+          path: './dist'
 
   deploy:
     environment:
